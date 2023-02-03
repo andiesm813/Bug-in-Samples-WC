@@ -115,15 +115,6 @@ export default class MasterView extends LitElement {
             </span>
             <div slot="content">Button Group</div>
           </igc-nav-drawer-item>
-          <igc-nav-drawer-item @click="${() => Router.go('/master-view/floating-action-button')}">
-            <span slot="icon">
-              <span class="material-icons icon">
-                bug_report
-              </span>
-              <igc-ripple></igc-ripple>
-            </span>
-            <div slot="content">Floating Action Button</div>
-          </igc-nav-drawer-item>
           <igc-nav-drawer-item @click="${() => Router.go('/master-view/space-between')}">
             <span slot="icon">
               <span class="material-icons icon">
