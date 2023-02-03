@@ -1,8 +1,8 @@
 import { html, css, LitElement } from 'lit';
 import { customElement, query } from 'lit/decorators.js';
-import { defineComponents, IgcAvatarComponent, IgcBadgeComponent, IgcButtonComponent, IgcCardComponent, IgcDialogComponent, IgcDropdownComponent, IgcIconComponent, IgcListComponent, IgcListItemComponent, IgcRippleComponent } from 'igniteui-webcomponents';
+import { defineComponents, IgcAvatarComponent, IgcButtonComponent, IgcCardComponent, IgcDialogComponent, IgcDropdownComponent, IgcIconComponent, IgcListComponent, IgcListItemComponent, IgcRippleComponent } from 'igniteui-webcomponents';
 
-defineComponents(IgcButtonComponent, IgcRippleComponent, IgcIconComponent, IgcDropdownComponent, IgcListComponent, IgcListItemComponent, IgcAvatarComponent, IgcCardComponent, IgcDialogComponent, IgcBadgeComponent);
+defineComponents(IgcButtonComponent, IgcRippleComponent, IgcIconComponent, IgcDropdownComponent, IgcListComponent, IgcListItemComponent, IgcAvatarComponent, IgcCardComponent, IgcDialogComponent);
 
 @customElement('app-buttons')
 export default class Buttons extends LitElement {
@@ -69,23 +69,13 @@ export default class Buttons extends LitElement {
       min-height: 50px;
     }
     .group_3 {
-      background-color: #24272B;
-      justify-content: flex-start;
-      align-items: stretch;
+      justify-content: center;
+      align-items: center;
       align-content: flex-start;
-      gap: 8px;
+      gap: 24px;
       position: relative;
-      padding: 24px;
       min-width: 50px;
       min-height: 50px;
-    }
-    .group_4 {
-      justify-content: flex-start;
-      align-items: stretch;
-      align-content: flex-start;
-      gap: 16px;
-      position: relative;
-      min-width: 50px;
     }
     .button {
       height: max-content;
@@ -98,6 +88,10 @@ export default class Buttons extends LitElement {
     .button_1 {
       height: max-content;
       min-width: min-content;
+    }
+    .button_2 {
+      width: max-content;
+      height: max-content;
     }
     .button::part(base) {
       color: hsla(var(--ig-success-500));
@@ -121,23 +115,9 @@ export default class Buttons extends LitElement {
       width: 24px;
       height: 24px;
     }
-    .h6 {
-      color: hsla(var(--ig-surface-500));
-      height: max-content;
-      min-width: min-content;
-    }
-    .text {
-      color: hsla(var(--ig-gray-300));
-      height: max-content;
-      min-width: min-content;
-    }
     .list {
       height: max-content;
       flex-shrink: 0;
-    }
-    .badge {
-      width: max-content;
-      height: max-content;
     }
   `;
 
@@ -265,6 +245,21 @@ export default class Buttons extends LitElement {
             </igc-button>
           </div>
         </div>
+        <div class="row-layout group_3">
+          <igc-button variant="fab" class="button_2">
+            <span class="material-icons">
+              edit
+            </span>
+            <igc-ripple></igc-ripple>
+          </igc-button>
+          <igc-button variant="fab" class="button_2">
+            <span>Like</span>
+            <span class="material-icons">
+              favorite
+            </span>
+            <igc-ripple></igc-ripple>
+          </igc-button>
+        </div>
       </div>
       <igc-dialog ?closeOnOutsideSelect="${true}" ?closeOnEscape="${true}" id="custom-dialog">
         <h3 slot="title">
@@ -293,44 +288,6 @@ export default class Buttons extends LitElement {
           </igc-button>
         </div>
       </igc-dialog>
-      <div class="column-layout group_3">
-        <h6 class="h6">
-          ISSUES
-        </h6>
-        <div class="row-layout group_4">
-          <p class="typography__subtitle-1 text">
-            When a button with RAISED or FLAT type has the icon switched turned on, it grows 2px in height
-          </p>
-          <h6 class="h6">
-            REPRODUCED IN: AppBuilder Edit/Preview and Angular app
-          </h6>
-          <igc-badge variant="success" class="badge">
-            BUG CREATED
-          </igc-badge>
-        </div>
-        <div class="row-layout group_4">
-          <p class="typography__subtitle-1 text">
-            Button's INNER PADDING in the generated apps is lacking, so they look smaller than Angular
-          </p>
-          <h6 class="h6">
-            REPRODUCED IN: Blazor and Web Components apps
-          </h6>
-          <igc-badge variant="success" class="badge">
-            BUG CREATED
-          </igc-badge>
-        </div>
-        <div class="row-layout group_4">
-          <p class="typography__subtitle-1 text">
-            When i change the foreground color of just ONE button, all the buttons get changed their foregrounds, except if they are part of a component. With the exception of buttons placed in custom dialog window content
-          </p>
-          <h6 class="h6">
-            REPRODUCED IN: Blazor and Web Components apps
-          </h6>
-          <igc-badge variant="success" class="badge">
-            BUG CREATED
-          </igc-badge>
-        </div>
-      </div>
     `;
   }
 }

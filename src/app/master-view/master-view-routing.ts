@@ -2,7 +2,6 @@ import { Route } from '@vaadin/router';
 import './buttons/buttons';
 import './button-styles/button-styles';
 import './button-group/button-group';
-import './floating-action-button/floating-action-button';
 import './space-between/space-between';
 import './cards-opacity/cards-opacity';
 import './card-actions/card-actions';
@@ -16,7 +15,6 @@ export const routes: Route[] = [
   { path: 'buttons', component: 'app-buttons', name: 'Buttons' },
   { path: 'button-styles', component: 'app-button-styles', name: 'Button Styles' },
   { path: 'button-group', component: 'app-button-group', name: 'Button Group' },
-  { path: 'floating-action-button', component: 'app-floating-action-button', name: 'Floating Action Button' },
   { path: 'space-between', component: 'app-space-between', name: 'Space Between' },
   { path: 'cards-opacity', component: 'app-cards-opacity', name: 'Cards Opacity' },
   { path: 'card-actions', component: 'app-card-actions', name: 'Card Actions' },
