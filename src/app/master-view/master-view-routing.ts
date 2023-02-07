@@ -8,7 +8,7 @@ import './card-actions/card-actions';
 import './chips/chips';
 import './dialog/dialog';
 import './grid-in-tab-layout/grid-in-tab-layout';
-import './input-group/input-group';
+import './inputs-combos/inputs-combos';
 
 export const routes: Route[] = [
   { path: '', component: 'app-buttons', name: 'Buttons' },
@@ -21,5 +21,5 @@ export const routes: Route[] = [
   { path: 'chips', component: 'app-chips', name: 'Chips' },
   { path: 'dialog', component: 'app-dialog', name: 'Dialog' },
   { path: 'grid-in-tab-layout', component: 'app-grid-in-tab-layout', name: 'Grid in Tab Layout' },
-  { path: 'input-group', component: 'app-input-group', name: 'Input Group' }
+  { path: 'inputs-combos', component: 'app-inputs-combos', name: 'Inputs Combos' }
 ];

@@ -169,14 +169,14 @@ export default class MasterView extends LitElement {
             </span>
             <div slot="content">Grid in Tab Layout</div>
           </igc-nav-drawer-item>
-          <igc-nav-drawer-item @click="${() => Router.go('/master-view/input-group')}">
+          <igc-nav-drawer-item @click="${() => Router.go('/master-view/inputs-combos')}">
             <span slot="icon">
               <span class="material-icons icon">
                 bug_report
               </span>
               <igc-ripple></igc-ripple>
             </span>
-            <div slot="content">Input Group</div>
+            <div slot="content">Inputs &amp; Combos</div>
           </igc-nav-drawer-item>
           <igc-nav-drawer-item @click="${() => Router.go('/master-view2/resizing-issue')}">
             <span slot="icon">
