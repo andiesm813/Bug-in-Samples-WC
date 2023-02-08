@@ -1,25 +1,27 @@
 import { Route } from '@vaadin/router';
 import './buttons/buttons';
-import './button-styles/button-styles';
 import './button-group/button-group';
-import './space-between/space-between';
-import './cards-opacity/cards-opacity';
+import './button-styles/button-styles';
 import './card-actions/card-actions';
+import './cards-opacity/cards-opacity';
 import './chips/chips';
 import './dialog/dialog';
 import './grid-in-tab-layout/grid-in-tab-layout';
 import './inputs-combos/inputs-combos';
+import './navigation-bar/navigation-bar';
+import './space-between/space-between';
 
 export const routes: Route[] = [
   { path: '', component: 'app-buttons', name: 'Buttons' },
   { path: 'buttons', component: 'app-buttons', name: 'Buttons' },
-  { path: 'button-styles', component: 'app-button-styles', name: 'Button Styles' },
   { path: 'button-group', component: 'app-button-group', name: 'Button Group' },
-  { path: 'space-between', component: 'app-space-between', name: 'Space Between' },
-  { path: 'cards-opacity', component: 'app-cards-opacity', name: 'Cards Opacity' },
+  { path: 'button-styles', component: 'app-button-styles', name: 'Button Styles' },
   { path: 'card-actions', component: 'app-card-actions', name: 'Card Actions' },
+  { path: 'cards-opacity', component: 'app-cards-opacity', name: 'Cards Opacity' },
   { path: 'chips', component: 'app-chips', name: 'Chips' },
   { path: 'dialog', component: 'app-dialog', name: 'Dialog' },
   { path: 'grid-in-tab-layout', component: 'app-grid-in-tab-layout', name: 'Grid in Tab Layout' },
-  { path: 'inputs-combos', component: 'app-inputs-combos', name: 'Inputs Combos' }
+  { path: 'inputs-combos', component: 'app-inputs-combos', name: 'Inputs Combos' },
+  { path: 'navigation-bar', component: 'app-navigation-bar', name: 'Navigation Bar' },
+  { path: 'space-between', component: 'app-space-between', name: 'Space Between' }
 ];

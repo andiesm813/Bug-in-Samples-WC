@@ -97,15 +97,6 @@ export default class MasterView extends LitElement {
             </span>
             <div slot="content">Buttons</div>
           </igc-nav-drawer-item>
-          <igc-nav-drawer-item @click="${() => Router.go('/master-view/button-styles')}">
-            <span slot="icon">
-              <span class="material-icons icon">
-                bug_report
-              </span>
-              <igc-ripple></igc-ripple>
-            </span>
-            <div slot="content">Button Styles</div>
-          </igc-nav-drawer-item>
           <igc-nav-drawer-item @click="${() => Router.go('/master-view/button-group')}">
             <span slot="icon">
               <span class="material-icons icon">
@@ -115,23 +106,14 @@ export default class MasterView extends LitElement {
             </span>
             <div slot="content">Button Group</div>
           </igc-nav-drawer-item>
-          <igc-nav-drawer-item @click="${() => Router.go('/master-view/space-between')}">
+          <igc-nav-drawer-item @click="${() => Router.go('/master-view/button-styles')}">
             <span slot="icon">
               <span class="material-icons icon">
                 bug_report
               </span>
               <igc-ripple></igc-ripple>
             </span>
-            <div slot="content">Space Between</div>
-          </igc-nav-drawer-item>
-          <igc-nav-drawer-item @click="${() => Router.go('/master-view/cards-opacity')}">
-            <span slot="icon">
-              <span class="material-icons icon">
-                bug_report
-              </span>
-              <igc-ripple></igc-ripple>
-            </span>
-            <div slot="content">Cards Opacity</div>
+            <div slot="content">Button Styles</div>
           </igc-nav-drawer-item>
           <igc-nav-drawer-item @click="${() => Router.go('/master-view/card-actions')}">
             <span slot="icon">
@@ -141,6 +123,15 @@ export default class MasterView extends LitElement {
               <igc-ripple></igc-ripple>
             </span>
             <div slot="content">Card Action Buttons</div>
+          </igc-nav-drawer-item>
+          <igc-nav-drawer-item @click="${() => Router.go('/master-view/cards-opacity')}">
+            <span slot="icon">
+              <span class="material-icons icon">
+                bug_report
+              </span>
+              <igc-ripple></igc-ripple>
+            </span>
+            <div slot="content">Cards Opacity</div>
           </igc-nav-drawer-item>
           <igc-nav-drawer-item @click="${() => Router.go('/master-view/chips')}">
             <span slot="icon">
@@ -185,7 +176,25 @@ export default class MasterView extends LitElement {
               </span>
               <igc-ripple></igc-ripple>
             </span>
-            <div slot="content">Scrollbars Issue</div>
+            <div slot="content">NavBar</div>
+          </igc-nav-drawer-item>
+          <igc-nav-drawer-item @click="${() => Router.go('<%=route_08daff30_1760_461b_83a8_d1b3bb27671b%>')}">
+            <span slot="icon">
+              <span class="material-icons icon">
+                bug_report
+              </span>
+              <igc-ripple></igc-ripple>
+            </span>
+            <div slot="content">Resizing Issue</div>
+          </igc-nav-drawer-item>
+          <igc-nav-drawer-item @click="${() => Router.go('/master-view/space-between')}">
+            <span slot="icon">
+              <span class="material-icons icon">
+                bug_report
+              </span>
+              <igc-ripple></igc-ripple>
+            </span>
+            <div slot="content">Space Between</div>
           </igc-nav-drawer-item>
         </igc-nav-drawer>
         <slot class="view-container"></slot>
