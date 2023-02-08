@@ -1,14 +1,30 @@
 import { Route } from '@vaadin/router';
 import './not-found/not-found.js';
-import './master-view/master-view';
-import { routes as masterViewRoute } from './master-view/master-view-routing';
-import './master-view2/master-view2';
-import { routes as masterView2Route } from './master-view2/master-view2-routing';
+import './buttons/buttons';
+import './button-group/button-group';
+import './button-styles/button-styles';
+import './card-actions/card-actions';
+import './cards-opacity/cards-opacity';
+import './chips/chips';
+import './dialog/dialog';
+import './grid-in-tab-layout/grid-in-tab-layout';
+import './inputs-combos/inputs-combos';
+import './navigation-bar/navigation-bar';
+import './space-between/space-between';
 
 export const routes: Route[] = [
-  { path: '', component: 'app-master-view', name: 'Master View', children: masterViewRoute },
-  { path: 'master-view', component: 'app-master-view', name: 'Master View', children: masterViewRoute },
-  { path: 'master-view2', component: 'app-master-view2', name: 'Master View2', children: masterView2Route },
+  { path: '', component: 'app-buttons', name: 'Buttons' },
+  { path: 'buttons', component: 'app-buttons', name: 'Buttons' },
+  { path: 'button-group', component: 'app-button-group', name: 'Button Group' },
+  { path: 'button-styles', component: 'app-button-styles', name: 'Button Styles' },
+  { path: 'card-actions', component: 'app-card-actions', name: 'Card Actions' },
+  { path: 'cards-opacity', component: 'app-cards-opacity', name: 'Cards Opacity' },
+  { path: 'chips', component: 'app-chips', name: 'Chips' },
+  { path: 'dialog', component: 'app-dialog', name: 'Dialog' },
+  { path: 'grid-in-tab-layout', component: 'app-grid-in-tab-layout', name: 'Grid in Tab Layout' },
+  { path: 'inputs-combos', component: 'app-inputs-combos', name: 'Inputs Combos' },
+  { path: 'navigation-bar', component: 'app-navigation-bar', name: 'Navigation Bar' },
+  { path: 'space-between', component: 'app-space-between', name: 'Space Between' },
   // The fallback route should always be after other alternatives.
   { path: '(.*)', component: 'app-not-found' }
 ];

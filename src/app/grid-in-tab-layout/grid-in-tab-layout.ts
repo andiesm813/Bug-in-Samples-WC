@@ -2,7 +2,7 @@ import { html, css, LitElement } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
 import { defineComponents, IgcIconComponent, IgcTabsComponent } from 'igniteui-webcomponents';
 import '@infragistics/igniteui-webcomponents-grids/grids/combined.js';
-import NorthwindService from '../../service/northwind-service';
+import NorthwindService from '../service/northwind-service';
 
 defineComponents(IgcTabsComponent, IgcIconComponent);
 
