@@ -170,6 +170,15 @@ export default class App extends LitElement {
             </span>
             <div slot="content">Inputs &amp; Combos</div>
           </igc-nav-drawer-item>
+          <igc-nav-drawer-item @click="${() => Router.go('/list')}">
+            <span slot="icon">
+              <span class="material-icons icon">
+                bug_report
+              </span>
+              <igc-ripple></igc-ripple>
+            </span>
+            <div slot="content">List</div>
+          </igc-nav-drawer-item>
           <igc-nav-drawer-item @click="${() => Router.go('/navigation-bar')}">
             <span slot="icon">
               <span class="material-icons icon">
@@ -179,6 +188,15 @@ export default class App extends LitElement {
             </span>
             <div slot="content">NavBar</div>
           </igc-nav-drawer-item>
+          <igc-nav-drawer-item @click="${() => Router.go('/rating')}">
+            <span slot="icon">
+              <span class="material-icons icon">
+                bug_report
+              </span>
+              <igc-ripple></igc-ripple>
+            </span>
+            <div slot="content">Rating</div>
+          </igc-nav-drawer-item>
           <igc-nav-drawer-item @click="${() => Router.go('/space-between')}">
             <span slot="icon">
               <span class="material-icons icon">
@@ -187,6 +205,15 @@ export default class App extends LitElement {
               <igc-ripple></igc-ripple>
             </span>
             <div slot="content">Space Between</div>
+          </igc-nav-drawer-item>
+          <igc-nav-drawer-item @click="${() => Router.go('/text-links')}">
+            <span slot="icon">
+              <span class="material-icons icon">
+                bug_report
+              </span>
+              <igc-ripple></igc-ripple>
+            </span>
+            <div slot="content">Text &amp; Links</div>
           </igc-nav-drawer-item>
         </igc-nav-drawer>
         <router-outlet class="view-container"></router-outlet>
