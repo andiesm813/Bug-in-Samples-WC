@@ -57,6 +57,7 @@ export default class NavigationBar extends LitElement {
     }
     .avatar {
       --background: none;
+      --ig-gray-400: transparent;
     }
     .button {
       height: max-content;

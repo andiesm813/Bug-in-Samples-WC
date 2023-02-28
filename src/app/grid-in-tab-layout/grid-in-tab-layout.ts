@@ -2,7 +2,7 @@ import { html, css, LitElement } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
 import { defineComponents, IgcIconComponent, IgcTabsComponent } from 'igniteui-webcomponents';
 import '@infragistics/igniteui-webcomponents-grids/grids/combined.js';
-import NorthwindService from '../service/northwind-service';
+import NorthwindService from '../service/Northwind-service';
 
 defineComponents(IgcTabsComponent, IgcIconComponent);
 
@@ -66,9 +66,10 @@ export default class GridInTabLayout extends LitElement {
 
   constructor() {
     super();
-    const northwindService: NorthwindService = new NorthwindService();
-    this.northwindEmployees = northwindService.getData('Employees');
+    this.northwindEmployees = this.northwindService.getData('Employees');
   }
+
+  private northwindService: NorthwindService = new NorthwindService();
 
   @property()
   private northwindEmployees?: any[];
@@ -81,7 +82,7 @@ export default class GridInTabLayout extends LitElement {
       <link rel='stylesheet' href='node_modules/@infragistics/igniteui-webcomponents-grids/grids/themes/light/material.css'>
       <div class="row-layout container">
         <div class="row-layout group">
-          <igc-grid .data="${this.northwindEmployees}" primary-key="employeeID" display-density="cosy" allow-filtering="true" filter-mode="excelStyleFilter" class="ig-typography grid">
+          <igc-grid .data="${this.northwindEmployees}" primary-key="employeeID" display-density="cosy" allow-filtering="true" filter-mode="excelStyleFilter" auto-generate="false" class="ig-typography grid">
             <igc-column field="lastName" data-type="string" header="lastName" sortable="true" selectable="false"></igc-column>
             <igc-column field="employeeID" data-type="number" header="employeeID" sortable="true" selectable="false"></igc-column>
             <igc-column field="firstName" data-type="string" header="firstName" sortable="true" selectable="false"></igc-column>
@@ -107,7 +108,7 @@ export default class GridInTabLayout extends LitElement {
               Label
             </igc-tab>
             <igc-tab-panel class="row-layout tab-item-content">
-              <igc-grid .data="${this.northwindEmployees}" primary-key="employeeID" display-density="cosy" allow-filtering="true" filter-mode="excelStyleFilter" class="ig-typography grid">
+              <igc-grid .data="${this.northwindEmployees}" primary-key="employeeID" display-density="cosy" allow-filtering="true" filter-mode="excelStyleFilter" auto-generate="false" class="ig-typography grid">
                 <igc-column field="lastName" data-type="string" header="lastName" sortable="true" selectable="false"></igc-column>
                 <igc-column field="employeeID" data-type="number" header="employeeID" sortable="true" selectable="false"></igc-column>
                 <igc-column field="firstName" data-type="string" header="firstName" sortable="true" selectable="false"></igc-column>

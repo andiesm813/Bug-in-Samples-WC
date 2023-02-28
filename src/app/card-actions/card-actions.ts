@@ -194,6 +194,37 @@ export default class CardActions extends LitElement {
             </igc-icon-button>
           </igc-card-actions>
         </igc-card>
+        <igc-card class="card">
+          <igc-card-media class="media-content">
+            <img src="/src/assets/design system.png" class="image" />
+          </igc-card-media>
+          <igc-card-header>
+            <h3 slot="title">
+              Card Title
+            </h3>
+            <h5 slot="subtitle">
+              This is the card subtitle
+            </h5>
+          </igc-card-header>
+          <igc-card-actions class="actions-content">
+            <igc-button variant="outlined" class="button">
+              READ
+              <igc-ripple></igc-ripple>
+            </igc-button>
+            <igc-icon-button variant="flat" class="icon-button">
+              <span class="material-icons">
+                favorite
+              </span>
+              <igc-ripple></igc-ripple>
+            </igc-icon-button>
+            <igc-icon-button variant="flat" class="icon-button">
+              <span class="material-icons">
+                share
+              </span>
+              <igc-ripple></igc-ripple>
+            </igc-icon-button>
+          </igc-card-actions>
+        </igc-card>
       </div>
       <div class="column-layout group">
         <h6 class="h6">

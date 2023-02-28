@@ -94,18 +94,18 @@ export default class Buttons extends LitElement {
       height: max-content;
     }
     .button_3::part(base) {
-      color: hsla(var(--ig-success-500));
+      background-color: hsla(var(--ig-primary-500));
     }
     .button_4::part(base) {
-      color: hsla(var(--ig-surface-500));
-      background-color: #6C429D;
+      color: hsla(var(--ig-success-500));
     }
     .button_5::part(base) {
       color: hsla(var(--ig-surface-500));
       background-color: #6C429D;
     }
     .button_6::part(base) {
-      color: #6C429D;
+      color: hsla(var(--ig-surface-500));
+      background-color: #6C429D;
     }
     .button_7::part(base) {
       color: #6C429D;
@@ -114,6 +114,9 @@ export default class Buttons extends LitElement {
       color: #6C429D;
     }
     .button_9::part(base) {
+      color: #6C429D;
+    }
+    .button_10::part(base) {
       color: #6C429D;
     }
     .dropdown::part(base) {
@@ -129,6 +132,7 @@ export default class Buttons extends LitElement {
     }
     .avatar {
       --background: none;
+      --ig-gray-400: transparent;
     }
     .icon {
       font-size: 24px;
@@ -157,11 +161,11 @@ export default class Buttons extends LitElement {
       <link rel='stylesheet' href='../../ig-theme.css'>
       <div class="column-layout group">
         <div class="row-layout buttons">
-          <igc-button class="button">
+          <igc-button class="button button_3">
             Button
             <igc-ripple></igc-ripple>
           </igc-button>
-          <igc-button class="button button_3">
+          <igc-button class="button button_4">
             <span class="material-icons">
               add
             </span>
@@ -325,42 +329,42 @@ export default class Buttons extends LitElement {
           </igc-button>
         </div>
         <div class="row-layout buttons">
-          <igc-button class="button button_4">
+          <igc-button class="button button_5">
             <span class="material-icons">
               add
             </span>
             <span>Green Button</span>
             <igc-ripple></igc-ripple>
           </igc-button>
-          <igc-button ?disabled="${true}" class="button button_5">
+          <igc-button ?disabled="${true}" class="button button_6">
             <span class="material-icons">
               add
             </span>
             <span>DISABLED</span>
             <igc-ripple></igc-ripple>
           </igc-button>
-          <igc-button variant="outlined" class="button button_6">
+          <igc-button variant="outlined" class="button button_7">
             <span class="material-icons">
               add
             </span>
             <span>Button</span>
             <igc-ripple></igc-ripple>
           </igc-button>
-          <igc-button variant="outlined" ?disabled="${true}" class="button button_7">
+          <igc-button variant="outlined" ?disabled="${true}" class="button button_8">
             <span class="material-icons">
               add
             </span>
             <span>DISABLED</span>
             <igc-ripple></igc-ripple>
           </igc-button>
-          <igc-button variant="flat" class="button button_8">
+          <igc-button variant="flat" class="button button_9">
             <span class="material-icons">
               add
             </span>
             <span>Button</span>
             <igc-ripple></igc-ripple>
           </igc-button>
-          <igc-button variant="flat" ?disabled="${true}" class="button button_9">
+          <igc-button variant="flat" ?disabled="${true}" class="button button_10">
             <span class="material-icons">
               add
             </span>
